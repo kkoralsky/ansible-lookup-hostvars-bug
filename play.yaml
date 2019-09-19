@@ -1,0 +1,5 @@
+- hosts: localhost
+  # gather_facts: no
+  tasks:
+    - debug: msg='{{ hostvars.localhost.var }}'
+    - debug: msg='{{ lookup("template", "template.j2") }}'
